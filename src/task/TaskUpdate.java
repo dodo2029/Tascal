@@ -50,7 +50,7 @@ public class TaskUpdate {
         Scanner scanner = new Scanner(System.in);
         System.out.println("===== タスク更新 =====");
         System.out.println("qで戻る");
-        System.out.print("更新するタスクID：");
+        System.out.print("更新するタスクIDを入力してください：");
         String taskId = scanner.nextLine();
         if (taskId.equals("q")) {
             return;
@@ -65,12 +65,12 @@ public class TaskUpdate {
                     return;
                 }
                 LocalDate startDate =
-                        inputDate(scanner, "開始日（yyyy/MM/dd）：");
+                        inputDate(scanner, "開始日（年/月/日）：");
                 if (startDate == null) {
                     return;
                 }
                 LocalDate endDate =
-                        inputDate(scanner, "締切日（yyyy/MM/dd）：");
+                        inputDate(scanner, "締切日（年/月/日）：");
                 if (endDate == null) {
                     return;
                 }
@@ -99,13 +99,13 @@ public class TaskUpdate {
                 try {
                     taskRepository.saveTasks(tasks);
                 } catch (Exception e) {
-                    System.out.println("タスク情報の保存に失敗しました。");
+                    System.out.println("タスク情報の保存に失敗しました");
                 }
-                System.out.println("タスクを更新しました！");
+                System.out.println("タスクを更新しました");
                 return;
             }
         }
 
-        System.out.println("タスクが見つかりませんでした。");
+        System.out.println("タスクが見つかりませんでした");
     }
 }

@@ -1,10 +1,12 @@
-package model;
+package app;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import Register.Register;
-import login.login;
+import auth.Register;
+import auth.login;
+import model.Task;
+import model.User;
 import service.TaskFileService;
 import service.TaskRepository;
 import service.UserFileService;
@@ -13,6 +15,7 @@ import service.UserRepository;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        
         UserRepository userRepository = new UserFileService();
         ArrayList<User> users = null;
         TaskRepository taskRepository = new TaskFileService();

@@ -5,10 +5,10 @@ import java.util.ArrayList;
 import model.Task;
 import model.User;
 
-public class Tasklist {
+public class TaskList {
     private ArrayList<Task> tasks;
     private User user;
-    public Tasklist(ArrayList<Task> tasks, User user) {
+    public TaskList(ArrayList<Task> tasks, User user) {
         this.tasks = tasks;
         this.user = user;
     }

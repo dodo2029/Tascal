@@ -37,7 +37,7 @@ public class TaskMenu {
                 continue;
             }
             if (choice == 1) {
-                Tasklist tasklist = new Tasklist(tasks, user);
+                TaskList tasklist = new TaskList(tasks, user);
                 tasklist.list();
             } else if (choice == 2) {
                 TaskCreate taskCreate = new TaskCreate(tasks, user);

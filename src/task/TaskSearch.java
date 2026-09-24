@@ -17,7 +17,7 @@ public class TaskSearch {
         Scanner scanner = new Scanner(System.in);
         System.out.println("===== タスク検索 =====");
         System.out.println("qで戻る");
-        System.out.print("検索するタスク名：");
+        System.out.print("検索するタスク名を入力してください：");
         String keyword = scanner.nextLine();
         if (keyword.equals("q")) {
             return;

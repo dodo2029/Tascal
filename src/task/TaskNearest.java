@@ -39,9 +39,9 @@ public class TaskNearest {
         System.out.println("ステータス：" + nearestTask.getStatus());
 
         if (days < 0) {
-            System.out.println("期限切れです。");
+            System.out.println("期限切れ");
         } else if (days == 0) {
-            System.out.println("締切は今日です！");
+            System.out.println("今日が締切です");
         } else {
             System.out.println("あと" + days + "日");
         }

@@ -1,4 +1,4 @@
-package login;
+package auth;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -28,8 +28,8 @@ public class login {
             if (user.getUserName().equals(userName)
                     && user.getEmail().equals(email)
                     && user.getPassword().equals(password)) {
-                System.out.println("ログインしました！");
-                System.out.println("ようこそ、" + user.getUserName() + "さん");
+                System.out.println("ログイン");
+                System.out.println("ようこそ" + user.getUserName() + "さん");
                 TaskMenu taskMenu = new TaskMenu(tasks, user);
                 taskMenu.showMenu();
                 return;

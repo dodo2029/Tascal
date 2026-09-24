@@ -1,9 +1,8 @@
-package Register;
+package auth;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import login.login;
 import model.Task;
 import model.User;
 import service.UserFileService;
@@ -24,10 +23,8 @@ public class Register {
         String userName = scanner.next();
         String email;
         while (true) {
-
             System.out.print("メールアドレス：");
             email = scanner.next();
-
             if (userService.isValidEmail(email)) {
                 break;
             }
@@ -40,7 +37,6 @@ public class Register {
             if (userService.isValidPassword(password)) {
                 break;
             }
-
             System.out.println("パスワードは8文字以上で、英字と数字を含めてください");
         }
         User user = new User(
@@ -49,19 +45,14 @@ public class Register {
                 email,
                 password
         );
-        
         users.add(user);
-
         UserRepository userRepository = new UserFileService();
-
         try {
             userRepository.saveUsers(users);
         } catch (Exception e) {
             System.out.println("ユーザー情報の保存に失敗しました。");
         }
-
         System.out.println("アカウントを作成しました");
-
         login login = new login(users, tasks);
         login.login();
     }

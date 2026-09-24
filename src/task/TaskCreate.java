@@ -76,7 +76,6 @@ public class TaskCreate {
                 .toString()
                 .replace("-", "")
                 .substring(0, 7);
-
         task.setTaskId(taskId);
         task.setUserId(user.getUserId());
         task.setTaskName(taskName);
@@ -84,7 +83,6 @@ public class TaskCreate {
         task.setEndDate(endDate);
         task.setStatus(status);
         task.setComment(comment);
-
         tasks.add(task);
         TaskRepository taskRepository = new TaskFileService();
         try {
@@ -92,7 +90,6 @@ public class TaskCreate {
         } catch (Exception e) {
             System.out.println("タスク情報の保存に失敗しました。");
         }
-
         System.out.println("タスクを登録しました！");
     }
 }

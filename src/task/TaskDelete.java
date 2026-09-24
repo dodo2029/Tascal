@@ -19,7 +19,7 @@ public class TaskDelete {
         Scanner scanner = new Scanner(System.in);
         System.out.println("===== タスク削除 =====");
         System.out.println("qで戻る");
-        System.out.print("削除するタスクID：");
+        System.out.print("削除するタスクIDを入力してください：");
         String taskId = scanner.nextLine();
         if (taskId.equals("q")) {
             return;
@@ -39,7 +39,7 @@ public class TaskDelete {
                     } catch (Exception e) {
                         System.out.println("タスク情報の保存に失敗しました。");
                     }
-                    System.out.println("タスクを削除しました！");
+                    System.out.println("タスクを削除しました");
                 } else {
                     System.out.println("削除をキャンセルしました。");
                 }
